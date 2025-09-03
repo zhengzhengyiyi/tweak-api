@@ -3,7 +3,8 @@
 	"package": "io.github.zhengzhengyiyi.tweak.mixin.client",
 	"compatibilityLevel": "JAVA_21",
 	"client": [
-		"ExampleClientMixin"
+		"ExampleClientMixin",
+		"GameOptionsMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1
