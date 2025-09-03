@@ -1,4 +1,4 @@
-package io.github.zhengzhengyiyi.tweak;
+package io.github.zhengzhengyiyi.tweak_api;
 
 import net.minecraft.client.option.GameOptions;
 

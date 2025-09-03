@@ -1,4 +1,4 @@
-package io.github.zhengzhengyiyi.tweak;
+package io.github.zhengzhengyiyi.tweak_api;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

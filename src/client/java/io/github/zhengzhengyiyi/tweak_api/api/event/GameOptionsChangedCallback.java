@@ -1,4 +1,4 @@
-package io.github.zhengzhengyiyi.tweak.api.event;
+package io.github.zhengzhengyiyi.tweak_api.api.event;
 
 import net.fabricmc.fabric.api.event.Event;
 import net.fabricmc.fabric.api.event.EventFactory;
