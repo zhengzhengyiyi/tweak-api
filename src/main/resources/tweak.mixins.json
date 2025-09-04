@@ -1,9 +1,9 @@
 {
 	"required": true,
-	"package": "io.github.zhengzhengyiyi.tweak.mixin",
+	"package": "io.github.zhengzhengyiyi.tweak_api.mixin",
 	"compatibilityLevel": "JAVA_21",
 	"mixins": [
-
+		"CommandManagerMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1

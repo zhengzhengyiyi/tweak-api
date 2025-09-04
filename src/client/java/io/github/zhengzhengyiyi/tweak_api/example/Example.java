@@ -6,11 +6,21 @@ import io.github.zhengzhengyiyi.tweak_api.api.event.ScreenOpenCallback;
 /**
  * A example callback using class.
  * The class include all the callbacks in this api mod and usage.
+ * This class do not include server callbacks
+ * 
  * call this class for example
  */
 public class Example {
 	/**
 	 * The constructor, can just call by constructor.
+	 * 
+	 * example usage {@code
+	 * 		new io.github.zhengzhengyiyi.example.Example();
+	 * }
+	 * or 
+	 * {@code
+	 * 		io.github.zhengzhengyiyi.example.Example.create();
+	 * }
 	 */
 	public Example() {
 		GameOptionsChangedCallback.EVENT.register((a, b) -> {
