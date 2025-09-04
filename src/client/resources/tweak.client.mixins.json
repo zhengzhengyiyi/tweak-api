@@ -1,9 +1,9 @@
 {
 	"required": true,
-	"package": "io.github.zhengzhengyiyi.tweak.mixin.client",
+	"package": "io.github.zhengzhengyiyi.tweak_api.mixin.client",
 	"compatibilityLevel": "JAVA_21",
 	"client": [
-		"ExampleClientMixin",
+		"MinecraftClientMixin",
 		"GameOptionsMixin"
 	],
 	"injectors": {

@@ -1,6 +1,7 @@
 plugins {
 	id 'fabric-loom' version "${loom_version}"
 	id 'maven-publish'
+	id 'signing'
 }
 
 version = project.mod_version
@@ -58,6 +59,7 @@ java {
 	// if it is present.
 	// If you remove this line, sources will not be generated.
 	withSourcesJar()
+	withJavadocJar()
 
 	sourceCompatibility = JavaVersion.VERSION_21
 	targetCompatibility = JavaVersion.VERSION_21
@@ -77,6 +79,29 @@ publishing {
 		create("mavenJava", MavenPublication) {
 			artifactId = project.archives_base_name
 			from components.java
+			
+			pom {
+                name = 'tweak_api'
+                description = 'a Minecraft Fabric api that make more callbacks and events.'
+                url = 'https://modrinth.com/mod/tweak-api'
+                licenses {
+                    license {
+                        name = 'The Apache License, Version 2.0'
+                        url = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+                    }
+                }
+                developers {
+                    developer {
+                        id = 'zhengzhengyiyi'
+                        name = 'zhengzhengyiyi'
+                        email = 'zhengzhengyiyiminecraft@gmail.com'
+                    }
+                }
+                scm {
+                    connection = 'scm:https://github.com/zhengzhengyiyi/tweak-api.git'
+                    url = 'https://modrinth.com/mod/tweak-api'
+                }
+            }
 		}
 	}
 
@@ -86,5 +111,19 @@ publishing {
 		// Notice: This block does NOT have the same function as the block in the top level.
 		// The repositories here will be used for publishing your artifact, not for
 		// retrieving dependencies.
+		maven {
+            url = layout.buildDirectory.dir('repo')
+        }
 	}
+}
+
+signing {
+    useGpgCmd()
+    sign publishing.publications.mavenJava
+}
+
+javadoc {
+    source += sourceSets.client.java.srcDirs
+    classpath += sourceSets.client.compileClasspath
+    options.encoding = 'UTF-8'
 }

@@ -3,7 +3,7 @@
 	"id": "tweak",
 	"version": "${version}",
 	"name": "tweak_api",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"description": "A Minecraft Fabric api mod that make more callback",
 	"authors": [
 		"Me!"
 	],
@@ -16,10 +16,10 @@
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"io.github.zhengzhengyiyi.tweak.Tweak_api"
+			"io.github.zhengzhengyiyi.tweak_api.Tweak_api"
 		],
 		"client": [
-			"io.github.zhengzhengyiyi.tweak.Tweak_apiClient"
+			"io.github.zhengzhengyiyi.tweak_api.Tweak_apiClient"
 		]
 	},
 	"mixins": [
