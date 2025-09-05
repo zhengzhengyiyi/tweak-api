@@ -3,7 +3,8 @@
 	"package": "io.github.zhengzhengyiyi.tweak_api.mixin",
 	"compatibilityLevel": "JAVA_21",
 	"mixins": [
-		"CommandManagerMixin"
+		"CommandManagerMixin",
+		"EntityHurtMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1
