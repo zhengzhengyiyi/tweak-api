@@ -15,14 +15,16 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 public class CommandManagerMixin {
 
     @Inject(
-        method = "execute(Lcom/mojang/brigadier/ParseResults;Ljava/lang/String;)I",
+        method = "execute(Lcom/mojang/brigadier/ParseResults;Ljava/lang/String;)V",
         at = @At("HEAD"),
         cancellable = true
     )
-    private void onExecute(ParseResults<ServerCommandSource> commandContext, String commandString, CallbackInfo ci) {
+    private void onExecute(ParseResults<ServerCommandSource> parseResults,
+                         String command,
+                         CallbackInfo ci) {
         ActionResult result = CommandExecuteCallback.EVENT
             .invoker()
-            .onCommandExecute(commandString);
+            .onCommandExecute(command);
 
         if (result == ActionResult.FAIL) {
             ci.cancel();

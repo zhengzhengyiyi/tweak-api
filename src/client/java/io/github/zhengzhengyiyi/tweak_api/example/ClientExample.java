@@ -10,19 +10,19 @@ import io.github.zhengzhengyiyi.tweak_api.api.event.ScreenOpenCallback;
  * 
  * call this class for example
  */
-public class Example {
+public class ClientExample {
 	/**
 	 * The constructor, can just call by constructor.
 	 * 
 	 * example usage {@code
-	 * 		new io.github.zhengzhengyiyi.example.Example();
+	 * 		new io.github.zhengzhengyiyi.example.ClientExample();
 	 * }
 	 * or 
 	 * {@code
-	 * 		io.github.zhengzhengyiyi.example.Example.create();
+	 * 		io.github.zhengzhengyiyi.example.ClientExample.create();
 	 * }
 	 */
-	public Example() {
+	public ClientExample() {
 		GameOptionsChangedCallback.EVENT.register((a, b) -> {
 			System.out.println(a);
 			System.out.println(b);
@@ -34,9 +34,9 @@ public class Example {
 	
 	/**
 	 * can be call in a static method
-	 * @return a new {@link Example()}
+	 * @return a new {@link ClientExample()}
 	 */
-	public static Example create() {
-		return new Example();
+	public static ClientExample create() {
+		return new ClientExample();
 	}
 }
